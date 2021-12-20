@@ -1,5 +1,5 @@
-SELECT a.name, b.rentals_date
-FROM customers AS a
-INNER JOIN rentals AS b
-ON a.id = b.id_customers
-WHERE extract(month FROM b.rentals_date)=9;
+Select a.id, a.name 
+FROM movies AS a
+INNER JOIN prices AS b
+ON a.id_prices = b.id
+WHERE b.value < 2.00
